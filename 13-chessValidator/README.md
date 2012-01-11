@@ -26,24 +26,27 @@ Notes
 ---------------------
 
 Solution is located in chess_moves_validator.rb and is consisted of the following components:
+
 - Board
   - describes the chess board with figures on it
   - when initializing it creates methods for placing figures on the board and getting the content of a field, like this:
-    ```ruby
-    board = Board.new
-    board.a2 = 'wP'
-    board.a2 == 'wP' asserts true
-    board.b2 == nil asserts true
-    board.a2 == 'bP' asserts false
-    ```
+
+      ```ruby
+      board = Board.new
+      board.a2 = 'wP'
+      board.a2 == 'wP' asserts true
+      board.b2 == nil asserts true
+      board.a2 == 'bP' asserts false
+      ```
   - method_missing and respond_to_missing? are used to allow for move validation inquiries like this:
-    ```ruby
-    board = Board.new
-    board.e1 = 'wK'
-    board.e8 = 'bK'
-    board.a2 = 'wP'
-    board.a2_a3? asserts true
-    ```
+
+      ```ruby
+      board = Board.new
+      board.e1 = 'wK'
+      board.e8 = 'bK'
+      board.a2 = 'wP'
+      board.a2_a3? asserts true
+      ```
 - Figure
   - a placeholder for figures
   - used to enable separate figure validation from board responsibilities

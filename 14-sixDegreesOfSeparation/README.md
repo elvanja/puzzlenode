@@ -26,6 +26,7 @@ Notes
 ---------------------
 
 Solution is located in social_network.rb and is consisted of the following components:
+
 - MentionsExtractor
   - receives a message in the following format: "simon: some text with a number of mentions denoted like this: @brian, @anna, that need not be at the end"
   - returns the author and and array of mentions extracted from the message content
